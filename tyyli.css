@@ -1,0 +1,318 @@
+/* Clicker*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    
+}
+
+/*Header content*/
+header {
+    display: inline-flex;
+    width: 100%;
+    height: 125px;
+    font-family: Comic Sans MS, monospace;
+    font-size: 2em;
+    text-align: center;
+    background-color: blue;
+    color: yellow;
+}
+
+h1 {
+    display: inline;
+    width: 35%;
+    margin: 0 auto;
+}
+
+.kontti {
+    display: inline;
+    width: 28%;
+}
+
+#counter {
+    width: 80%;
+    margin-left: 1%;
+    margin-top: 10%;
+    font-size: 1.5em;
+    background-color: aquamarine;
+    color: blue;
+    border-radius: 5px;
+}
+
+#clicks {
+    position: absolute;
+    font-weight: bold;
+    top: 5%;
+    right: 20%;
+    font-size: 1.5em;
+}
+
+.pts {
+    position: absolute;
+    left: 24%;
+    top: 5%;
+    font-size: 1.5em;
+}
+
+meter {
+    position: absolute;
+    width: 18%;
+    top: 6%;
+    right: 1%;
+    height: 10%;
+}
+
+/*Main & Footer content*/
+main {
+    width: 100%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: blue;
+    z-index: 10;
+}
+
+/* Stage & Drum set */
+
+.stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 510px;
+}
+
+#basari {
+    position: absolute;
+    bottom: 5%;
+    left: 15%;
+    z-index: 1;
+}
+
+#basari:active {
+    bottom: 4.8%;
+    left: 15.2;
+}
+
+#tom {
+    position: absolute;
+    bottom: 2%;
+    right: 20%;
+    z-index: 2;
+}
+
+#tom:active {
+    bottom: 1.8%;
+}
+
+#raid {
+    position: absolute;
+    bottom: 38%;
+    right: 22%;
+    z-index: 1;
+}
+
+#raid:active {
+    rotate: -3deg;
+}
+
+#snare {
+    position: absolute;
+    bottom: 20%;
+    left: 36%;
+    z-index: 4;
+}
+
+#snare:active {
+    bottom: 19.8%;
+    left: 36.2%;
+}
+
+/* Bubbles */
+
+.bubbleAbso {
+    position: absolute;
+    top: 25%;
+}
+
+.bubbleKontti {
+    position: relative;
+    text-align: center;
+}
+
+#bubbleText {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Comic Sans MS;
+    font-size: 2em;
+}
+
+
+/*Texts*/
+#bassUp {
+    position: absolute;
+    width: 0;
+    z-index: 3;
+}
+
+#tuplaKupla {
+    position: absolute;
+    width: 0;
+    z-index: 3;
+}
+
+#insane {
+    position: absolute;
+    width: 0;
+    z-index: 3;
+}
+
+#ridi {
+    position: absolute;
+    width: 0;
+    z-index: 3;
+}
+
+#bpm {
+    position: absolute;
+    width: 0;
+    z-index: 3;
+}
+
+/*Sticks*/
+#pedaali {
+    position: absolute;
+    width: 1.5%;
+    bottom: 6%;
+    left: 58%;
+    z-index: 2;
+    animation: hammer;
+    animation-play-state: paused;
+}
+
+#pedaali2 {
+    position: absolute;
+    width: 1.5%;
+    bottom: 6%;
+    left: 30%;
+    z-index: 2;
+    animation: hammer2;
+    animation-play-state: paused;
+}
+
+#kapula {
+    position: absolute;
+    width: 0;
+    bottom: 47%;
+    right: 40%;
+    rotate: 25deg;
+    z-index: 5;
+    animation: kapula 200ms 100 linear;
+    animation-play-state: paused;
+}
+
+#poikki {
+    position: absolute;
+    width: 0em;
+    top: 22%;
+    left: 92%;
+    z-index: 2;
+}
+
+#poikki:hover {
+    width: 6em;
+}
+
+/*Boosters*/
+#booster {
+    position: absolute;
+    width: 0;
+    top: 20%;
+    right: 20%;
+    z-index: 5;
+}
+
+/*Animations*/
+@keyframes hammer {
+    0% {bottom: 5.5%; rotate: 10deg;}
+    10% {bottom: 6%; rotate: -10deg; left: 57.8;}
+    100% {bottom: 6%; left: 57.8;}
+}
+
+@keyframes hammer2 {
+    0% {bottom: 5.5%; rotate: -10deg;}
+    10% {bottom: 6%; rotate: 10deg; left: 29.8%;}
+    100% {bottom: 6%; left: 29.8;}
+}
+
+@keyframes kapula {
+    1% {width: 1%;}
+    20% {rotate: 10deg;}
+    60% {rotate: 15deg;}
+    80% {rotate: 25deg;}
+    95% {rotate: 10deg;}
+}
+
+@keyframes ff {
+    1% {opacity: 80%; width: 0.8em; rotate: 27deg;}
+    10% {opacity: 100%; width: 0.9; rotate: 38deg;}
+    40% {rotate: 55deg;}
+    70% {rotate: 38deg;}
+    95% {rotate: 30deg; width: 0.8em; opacity: 80%;}
+}
+
+/*Responsivity*/
+
+@media only screen and (max-width: 1200px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #raid {
+        bottom: 28%;
+    }
+
+    #counter {
+        font-size: 1.2em;
+    }
+
+    .pts {
+        top: 4%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        clear: both;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #raid {
+        bottom: 25%;
+    }
+
+    #snare {
+        bottom: 15%;
+    }
+    #snare:active {
+        bottom: 14.8%;
+    }
+
+    .pts {
+        top: 3%;
+        font-size: 1.2em;
+    }
+}

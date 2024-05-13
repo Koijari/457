@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fi-fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tyyli.css">
+    <script src="clicker.js"></script>
+    <link rel="icon" href="kuvat/tag.ico">
+    <title>Clicker</title>
+</head>
+<body>
+
+<header>
+    <div class="kontti">
+        <div id="counter">---</div>
+        <span class="pts">pts</span>
+    </div>
+    <h1>BLAST BEAT</h1>
+    <div class="kontti">
+        <span id="clicks">Lvl 1 </span>
+        <meter id="meter" min="0" max="150" value=""></meter>
+    </div>
+</header>
+
+<main>
+    <div class="cont">
+        <!--Stage & Drums-->
+        <img src="kuvat/Stage.png" alt="Stage" class="stage">
+        <img src="kuvat/basarit2.png" onclick="boom()" alt="bass drum" id="basari" width="60%">
+        <img src="kuvat/tom.png" onclick="tom()" alt="Tom drum" id="tom" width="20%">
+        <img src="kuvat/raid.png" onclick="splash()" alt="raid cymbal" id="raid" width="25%">
+        <img src="kuvat/snare.png" onclick="tick()" alt="snare" id="snare" width="18%">
+        <img src="kuvat/pedaali.png" alt="vasara" id="pedaali">
+        <img src="kuvat/pedaali.png" alt="vasara2" id="pedaali2">
+        <img src="kuvat/kapula1.png" alt="tikku" id="kapula">
+
+        <!--Text & bubles-->
+        <div class="bubbleAbso">
+            <div class="bubbleKontti">
+                <img src="kuvat/kupla.png" alt="puhekupla" width="80%">
+                <div id="bubbleText">*YAWN*</div>
+            </div>
+        </div>
+        <img src="kuvat/ridi.png" alt="selkee homma" id="ridi">
+        <img src="kuvat/doubleHit.png" alt="tuplavirveli" id="tuplaKupla">
+        <img src="kuvat/Nopee.png" alt="Kahjo" id="insane">
+        <img src="kuvat/B_speed.png" alt="basso speed up" id="bassUp">   
+        <img src="kuvat/180bpm.png" alt="180" id="bpm">
+
+        <!--Boosters & Missfortunes-->
+        <img src="kuvat/booster.png" alt="flying fingers" id="booster" onclick="flyingFingers()">
+        <img src="kuvat/katki_kapula.png" alt="kapula rikki" id="poikki">
+    </div>
+
+</main>
+
+<footer>
+    <p>Nadaaaa....</p>
+</footer>
+    
+</body>
+</html>
